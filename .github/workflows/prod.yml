@@ -3,7 +3,7 @@ name: Deploy Dev Environment
 on:
   push:
     branches:
-      - dev  # Ce workflow s'exécute uniquement pour la branche dev
+      - main  # Ce workflow s'exécute uniquement pour la branche dev
 
 jobs:
   deploy:
@@ -42,4 +42,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Utilise le token GitHub pour autoriser le déploiement
           publish_dir: ./  # Spécifie le répertoire source à publier, ici la racine du dépôt
-          destination_dir: dev  # Déploie les fichiers dans le dossier /dev dans gh-pages
+          destination_dir: .  # Déploie les fichiers dans le dossier /dev dans gh-pages
